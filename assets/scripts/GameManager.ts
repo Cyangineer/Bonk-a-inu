@@ -36,7 +36,7 @@ export class GameManager {
     }
 
     public resetTime() {
-        this.timeRemaining = 30
+        this.timeRemaining = 10
     }
 
     // SCORE MANAGER
