@@ -16,10 +16,13 @@ export class Gameplay extends Component {
     }
 
     update(deltaTime: number) {
-        this.timerLabel.string = GameManager.instance.getTime()
+        this.timerLabel.string = ` ${GameManager.instance.getTime()} `
         this.scoreLabel.string = GameManager.instance.getScore()
         if (GameManager.instance.isGameOver()) {
             this.startFlash()
+        }
+        if (GameManager.instance.getTime() <= 0) {
+            GameManager.instance.gameOver()
         }
     }
 

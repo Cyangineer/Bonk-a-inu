@@ -32,7 +32,7 @@ export class GameManager {
     }
 
     public getTime() {
-        return ` ${this.timeRemaining} `;
+        return this.timeRemaining
     }
 
     public resetTime() {
